@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="
+http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="Emp" class="com.springcore.collections.Employees">
+		<property name="name" value="khan" />
+		<property name="phones">
+			<list>
+				<value>8893289432</value>
+				<value>4356498076</value>
+				<value>5353553236</value>
+				<null />
+			</list>
+		</property>
+		<property name="addresses">
+			<set>
+				<value>Delhi</value>
+				<value>Mumbai</value>
+				<value>Kanpur</value>
+				<null />
+
+			</set>
+		</property>
+
+		<property name="courses">
+			<map>
+				<entry key="Java" value="4 months" />
+				<entry key="Python" value="2 months" />
+				<entry key="C++" value="3 months" />
+				<entry key="null" value="null"></entry>
+
+			</map>
+		</property>
+
+		<property name="props">
+			<props>
+				<prop key="name">Sameer</prop>
+
+			</props>
+		</property>
+
+	</bean>
+
+	<bean class="com.springcore.collections.Question" name="q">
+		<constructor-arg value="101" />
+		<constructor-arg value="What is java ?" />
+		<constructor-arg>
+			<list>
+				<value>Java is a programming language</value>
+				<value>Java is a Platform</value>
+				<value>Java is an Platform independent</value>
+			</list>
+		</constructor-arg>
+
+
+	</bean>
+
+
+</beans>
